@@ -2,7 +2,8 @@
 
 namespace Ucu.Poo.GameOfLife
 {
-    //Es la clase encargada de realizar el tablero
+    //Es la clase encargada de realizar el tablero.
+    // En algunos casos podrá llegar a ser el experto de la información.
     public class Board
     {
         private bool[,] grid;
@@ -18,6 +19,15 @@ namespace Ucu.Poo.GameOfLife
             height = matriz.GetLength(1);
         }
 
+    //Cell podría ser perfectamente otra clase por SRP.
+    //Ya que pueden haber casos en donde se le quiera realizar más de un cambio y, por lo tanto, 
+    //tendría que estar en otra clase por separado.
+    //Sin embargo, como el ejercicio no solicita nada de ello, decidimos que lo mejor era hacer Cell y Board juntos.
+    
+
+    //En esta parte del código se va a verificar que células están vivas.
+    // Este metodo va a ser posteriormente llamado por la clase Rules para agregar más especificaciónes 
+    // de su estado de vida.
         private int Cell(int x, int y)
         {
             int aliveNeighbors = 0;
