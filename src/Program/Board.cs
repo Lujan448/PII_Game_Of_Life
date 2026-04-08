@@ -36,25 +36,5 @@ namespace Ucu.Poo.GameOfLife
         {
             cells[x,y] = state;
         }
-    
-
-    //En esta parte del código se va a verificar que células están vivas.
-    // Este metodo va a ser posteriormente llamado por la clase Rules para agregar más especificaciónes 
-    // de su estado de vida.
-        public int CellNeighbors(int x, int y)
-        {
-            int aliveNeighbors = 0;
-            for (int i = x - 1; i <= x + 1; i++)
-            {
-                for (int j = y - 1; j <= y + 1; j++)
-                {
-                    if (i >= 0 && i < Width && j >= 0 && j < Height && cells[i, j])
-                    {
-                        aliveNeighbors++;
-                    }
-                }
-            }
-            return aliveNeighbors;
-        } 
     }
 }
