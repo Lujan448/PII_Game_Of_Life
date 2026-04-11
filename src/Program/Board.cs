@@ -32,9 +32,9 @@ namespace Ucu.Poo.GameOfLife
             cells[x,y] = state;
         }
 
-        public void ChangeCellState(int x, int y, bool state)
+        public void ChangeCellState(int x, int y)
         {
-            cells[x,y] = state;
+            cells[x,y] = !cells[x, y];
         }
     }
 }
