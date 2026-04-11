@@ -11,10 +11,10 @@ namespace Ucu.Poo.GameOfLife
      */
     public class Motor
     {
-        public Board CalcularSiguienteGeneracion(Board tableroActual)
+        public Board NextGeneration(Board ActualBoard)
         {
-            int width = tableroActual.Width;
-            int height = tableroActual.Height;
+            int width = ActualBoard.Width;
+            int height = ActualBoard.Height;
             
             bool[,] cloneboard = new bool[width, height];
 
@@ -28,14 +28,14 @@ namespace Ucu.Poo.GameOfLife
                     {
                         for (int j = y - 1; j <= y + 1; j++)
                         {
-                            if (i >= 0 && i < width && j >= 0 && j < height && tableroActual.IsAlive(i, j))
+                            if (i >= 0 && i < width && j >= 0 && j < height && ActualBoard.IsAlive(i, j))
                             {
                                 aliveNeighbors++;
                             }
                         }
                     }
 
-                    bool isAlive = tableroActual.IsAlive(x, y);
+                    bool isAlive = ActualBoard.IsAlive(x, y);
                     if (isAlive)
                     {
                         aliveNeighbors--;
