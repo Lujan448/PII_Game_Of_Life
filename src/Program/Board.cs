@@ -24,24 +24,5 @@ namespace Ucu.Poo.GameOfLife
     //tendría que estar en otra clase por separado.
     //Sin embargo, como el ejercicio no solicita nada de ello, decidimos que lo mejor era hacer Cell y Board juntos.
     
-
-    //En esta parte del código se va a verificar que células están vivas.
-    // Este metodo va a ser posteriormente llamado por la clase Rules para agregar más especificaciónes 
-    // de su estado de vida.
-        private int Cell(int x, int y)
-        {
-            int aliveNeighbors = 0;
-            for (int i = x - 1; i <= x + 1; i++)
-            {
-                for (int j = y - 1; j <= y + 1; j++)
-                {
-                    if (i >= 0 && i < width && j >= 0 && j < height && grid[i, j])
-                    {
-                        aliveNeighbors++;
-                    }
-                }
-            }
-            return aliveNeighbors;
-        } 
     }
 }
