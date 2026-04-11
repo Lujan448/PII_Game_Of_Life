@@ -28,14 +28,14 @@ namespace Ucu.Poo.GameOfLife
                     {
                         for (int j = y - 1; j <= y + 1; j++)
                         {
-                            if (i >= 0 && i < width && j >= 0 && j < height && ActualBoard.IsAlive(i, j))
+                            if (i >= 0 && i < width && j >= 0 && j < height && ActualBoard.CellEstate(i, j))
                             {
                                 aliveNeighbors++;
                             }
                         }
                     }
 
-                    bool isAlive = ActualBoard.IsAlive(x, y);
+                    bool isAlive = ActualBoard.CellEstate(x, y);
                     if (isAlive)
                     {
                         aliveNeighbors--;
