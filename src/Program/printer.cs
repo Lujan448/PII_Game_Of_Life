@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using Ucu.Poo.GameOfLife;
 
-namespace Program
+namespace Ucu.Poo.GameOfLife
 {
     public class Printer
     {
