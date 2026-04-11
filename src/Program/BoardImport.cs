@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
-using system;
+using System;
 namespace Ucu.Poo.GameOfLife
 {
 //clase encargada de cargar el archivo al programa
