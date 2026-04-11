@@ -4,8 +4,8 @@ namespace Ucu.Poo.GameOfLife
 {
     /*
      * JUSTIFICACIÓN DE DISEÑO:
-     * - SRP (Principio de Responsabilidad Única): Su única responsabilidad es ser el punto de 
-     * entrada de la aplicación y coordinar la ejecución continua del juego. No realiza cálculos ni lecturas.
+     * - SRP (Principio de Responsabilidad Única): Realizamos un main aparte que es el program que por separado como crear los objetos,
+     * -  que son cosas independientes por lo tanto lo hacemos en esta clase , asi si tenemos que modificar algo solo tenemos que cambiar esta clase. 
      * - Expert (Experto en Información): Actúa como el controlador principal. Conoce el flujo del 
      * programa y sabe a qué objetos (los verdaderos expertos) delegar cada tarea (leer, calcular, imprimir).
      */
