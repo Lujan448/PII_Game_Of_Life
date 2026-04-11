@@ -13,10 +13,10 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            BoardImporter importer = new BoardImporter();
+            BoardImport import = new BoardImport();
             Motor motor = new Motor();
             Printer printer = new Printer();
-
+          
             Board board = importer.Load("board.txt");
 
             while (true)
