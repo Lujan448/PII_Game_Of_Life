@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -27,6 +27,8 @@ namespace Ucu.Poo.GameOfLife
     //Ya que pueden haber casos en donde se le quiera realizar más de un cambio y, por lo tanto, 
     //tendría que estar en otra clase por separado.
     //Sin embargo, como el ejercicio no solicita nada de ello, decidimos que lo mejor era hacer Cell y Board juntos.
+    
+
         public void SetCellState(int x, int y, bool state)
         {
             cells[x,y] = state;
