@@ -13,7 +13,7 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            BoardImport import = new BoardImport();
+            BoardImporter importer = new BoardImporter();
             Motor motor = new Motor();
             Printer printer = new Printer();
           
