@@ -2,7 +2,7 @@
 
 namespace Ucu.Poo.GameOfLife
 {
-    //Es la clase encargada de realizar el tablero.
+    //Es la clase encargada de representar el tablero.
     //Tiene la responsabilidad de conocer la posición de las células, además del alto y ancho para hacer la tabla.
     public class Board
     {
