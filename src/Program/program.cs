@@ -16,7 +16,8 @@ namespace Ucu.Poo.GameOfLife
             Motor motor = new Motor();
             Printer printer = new Printer();
           
-            Board board = new Board(BoardImporter.Load("board.txt"));
+            BoardImporter importer = new BoardImporter("board.txt");
+            Board board = new Board(importer.Load());
 
             while (true)
             {
