@@ -10,15 +10,21 @@ namespace Ucu.Poo.GameOfLife
         {
         //lee el archivo y lo pasa a un string para luego conventir esa sting en un arry con el split
         string ReadFile = File.ReadAllText(filePath);
-        string[] FileLines = ReadFile.Split('\n');
+        string[] fileLines = ReadFile.Split('\n');
+
+        for (int i = 0; i < fileLines.Length; i++)
+        {
+            fileLines[i] = fileLines[i].Trim();
+        }
+
         //crea la matriz
-        bool [,] board = new bool [FileLines.Length , FileLines[0].Length];
+        bool [,] board = new bool [fileLines.Length , fileLines[0].Length];
         // recorre la matriz fijandose si el caracter es 0 o 1 y los remplaza con false o true respectivamente
-        for (int y = 0; y < FileLines.Length ; y++)
+        for (int y = 0; y < fileLines.Length ; y++)
             {
-                for (int x = 0; x < FileLines[0].Length ; x++)
+                for (int x = 0; x < fileLines[0].Length ; x++)
                 {
-                 if (FileLines[y][x]=='1')
+                 if (fileLines[y][x]=='1')
                     {
                         board [y,x]= true;
                     }
