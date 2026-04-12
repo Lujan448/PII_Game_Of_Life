@@ -5,10 +5,16 @@ using System.Linq;
 
 namespace Ucu.Poo.GameOfLife
 {
-//Esta es la clase encargada de cargar el archivo al programa.
+//Es el experto en cargar e interpretar el archivo, conoce el destino de este
+// y sabe convertirlo en una matriz de booleanos.
+
+//En este caso, nosotros aplicamos SRP, creando una clase por separado, ya que aunque la clase Board podría 
+//cumplir con la responsabilidad de cargar el archivo, si en algún momento se quiere cambiar la fuente de como obtener los datos
+//Board tendría más de una razón de cambio.
+//Entonces, si surge algún tipo de cambio que tenga que ver con la importación del archivo,
+//se realiza directamente aquí. 
     public class BoardImporter
     {
-        //Tiene la responsabilidad de conocer el nombre del archivo
         private string filePath;
         public BoardImporter(string filePath)
         {
@@ -29,9 +35,9 @@ namespace Ucu.Poo.GameOfLife
         }
 
 
-        //Se crea la matriz
+ 
         bool [,] board = new bool [fileLines[0].Length, fileLines.Length];
-        //Se recorre la matriz fijandose si el caracter es 0 o 1 y los remplaza con false o true respectivamente
+
         for (int y = 0; y < fileLines.Length ; y++)
             {
                 for (int x = 0; x < fileLines[y].Length ; x++)
@@ -45,13 +51,5 @@ namespace Ucu.Poo.GameOfLife
             }
             return board;
         }
-
-//En este caso, nosotros aplicamos SRP, creando una clase por separado, ya que aunque la clase Board podría 
-//cumplir con la responsabilidad de cargar el archivo, si en algún momento se quiere cambiar la fuente de como obtener los datos
-//Board tendría más de una razón de cambio.
-//Entonces, si surge algún tipo de cambio que tenga que ver con la importación del archivo,
-//se realiza directamente aquí. 
-
- 
     }
 }

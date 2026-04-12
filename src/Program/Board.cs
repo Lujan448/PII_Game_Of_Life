@@ -2,8 +2,9 @@
 
 namespace Ucu.Poo.GameOfLife
 {
-    //Es la clase encargada de representar el tablero.
-    //Tiene la responsabilidad de conocer la posición de las células, además del alto y ancho para hacer la tabla.
+    //JUSTIFICACIÓN DE DISEÑO:
+    //-SRP: se encarga únicamente de representar y conocer el estado del tablero.
+    //-Expert: es el experto en la información del tablero, conoce la posición de las células, el alto y ancho.
     public class Board
     {
         public int Width { get; set; }
