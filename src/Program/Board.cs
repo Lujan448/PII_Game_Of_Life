@@ -23,10 +23,9 @@ namespace Ucu.Poo.GameOfLife
         }
 
 
-    //Cell podría ser perfectamente otra clase por SRP.
-    //Ya que pueden haber casos en donde se le quiera realizar más de un cambio y, por lo tanto, 
-    //tendría que estar en otra clase por separado.
-    //Sin embargo, como el ejercicio no solicita nada de ello, decidimos que lo mejor era hacer Cell y Board juntos.
+    //Por SRP, la célula debería tener su propia clase con sus responsabilidades correspondientes.
+    //Sin embargo, como el ejercicio no solicita nada de ello, decidimos colocar la lógica de Cell dentro
+    //de la clase Board.
     
 
         public void SetCellState(int x, int y, bool state)
