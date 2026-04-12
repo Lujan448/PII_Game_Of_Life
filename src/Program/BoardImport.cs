@@ -6,10 +6,10 @@ namespace Ucu.Poo.GameOfLife
 //clase encargada de cargar el archivo al programa
     public class BoardImporter
     {
-        public static bool[,] Load()
+        public static bool[,] Load(string filePath)
         {
         //lee el archivo y lo pasa a un string para luego conventir esa sting en un arry con el split
-        string ReadFile = File.ReadAllText("board.txt");
+        string ReadFile = File.ReadAllText(filePath);
         string[] FileLines = ReadFile.Split('\n');
         //crea la matriz
         bool [,] board = new bool [FileLines.Length , FileLines[0].Length];
