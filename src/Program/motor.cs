@@ -2,8 +2,9 @@ namespace Ucu.Poo.GameOfLife
 {
     /*
      * JUSTIFICACIÓN DE DISEÑO:
-     * - SRP : conocer y aplicar las reglas de supervivencia del algoritmo de Conway. Al poder tener más de una 
-     * razón de cambio, se realiza la clase motor por separado para poder cumplir con sus responsabilidades correspondientes.
+     * - SRP : conocer y aplicar las reglas de supervivencia del algoritmo de Conway. 
+     * Si esta lógica estuviera en Board, tendría más de una razón de cambio, por esta
+     * razón es que se separa en una clase motor para poder realizar aqui los cambios correspondientes.
      * - Expert : Es el experto en la lógica del juego. Recibe el 
      * estado actual (Board) y tiene la información del algoritmo para procesar quién vive 
      * y quién muere, devolviendo un tablero nuevo.
