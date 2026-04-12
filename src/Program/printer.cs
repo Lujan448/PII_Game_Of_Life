@@ -4,6 +4,14 @@ using Ucu.Poo.GameOfLife;
 
 namespace Ucu.Poo.GameOfLife
 {
+    //En esta clase pasa lo mismo que con Motor o BoardImporter.
+    //Si la responsabilidad de imprimir estuviera en Board,
+    //tendría más de una razón de cambio,
+    //por eso se separa en Printer para realizar los cambios correspondientes aquí.
+
+    //Es la clase experta en como imprimir (en este caso por consola) el juego.
+    //Va a recibir el tablero y según sus medidas lo va a imprimir de cierta forma.
+
     public class Printer
     {
         public void Print(Board board)
