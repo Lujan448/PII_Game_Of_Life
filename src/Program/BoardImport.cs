@@ -34,8 +34,6 @@ namespace Ucu.Poo.GameOfLife
             fileLines[i] = fileLines[i].Trim();
         }
 
-
- 
         bool [,] board = new bool [fileLines[0].Length, fileLines.Length];
 
         for (int y = 0; y < fileLines.Length ; y++)
