@@ -1,6 +1,8 @@
 using System.Runtime.CompilerServices;
 using System;
 using System.IO;
+using System.Linq;
+
 namespace Ucu.Poo.GameOfLife
 {
 //clase encargada de cargar el archivo al programa
@@ -16,6 +18,8 @@ namespace Ucu.Poo.GameOfLife
         {
             fileLines[i] = fileLines[i].Trim();
         }
+
+        fileLines = fileLines.Where(line => line.Length > 0).ToArray();
 
         //crea la matriz
         bool [,] board = new bool [fileLines[0].Length, fileLines.Length];
