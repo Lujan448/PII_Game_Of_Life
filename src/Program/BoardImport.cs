@@ -18,19 +18,15 @@ namespace Ucu.Poo.GameOfLife
         }
 
         //crea la matriz
-        bool [,] board = new bool [fileLines.Length , fileLines[0].Length];
+        bool [,] board = new bool [fileLines[0].Length, fileLines.Length];
         // recorre la matriz fijandose si el caracter es 0 o 1 y los remplaza con false o true respectivamente
         for (int y = 0; y < fileLines.Length ; y++)
             {
-                for (int x = 0; x < fileLines[0].Length ; x++)
+                for (int x = 0; x < fileLines[y].Length ; x++)
                 {
                  if (fileLines[y][x]=='1')
                     {
-                        board [y,x]= true;
-                    }
-                    else
-                    {
-                        board[y,x]= false;
+                        board [x, y]= true;
                     }
                 }
                 
